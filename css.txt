@@ -270,9 +270,182 @@ css属性
 
 2017-10-20
 ==========================================================================================================
+文字属性
+  
+ font: italic bold 14px/28px arial,sans-serif;
+ font是一个综合属性  等价于
+     font-style: italic;
+     font-weight: bold;
+     font-size: 14px;
+     line-height: 28px;
+     font-family: arial,sans-serif;
+
+  一般font这么综合 
+       font: 14px/28px "Microsoft Yahei","SimSun";   
+
+text-indext与text-align
+     text-indext 表示文字缩进    
+
+
+===================盒模型=============
+1  盒模型类似于“放照片的相框”
+       盒模型涉及 width  height  padding border margin这些属性
+
+    任何html元素都是一个盒子 就是一个矩形   
+    
+2 大家有这样一个认识 盒子的真实宽度不是width属性的值，width值指的是内容宽度
+而盒子真实宽度=左border+左padding+width+右padding+右border 
+
+
+3 padding属性
+     指的是内容到边框之间的距离 四个方向都有值
+        * padding: 20px;  上右下左都是20px 
+           等价于以下写法
+              padding-top: 20px;
+              padding-right: 20px;
+              padding-bottom: 20px;
+              padding-left: 20px;
+        * padding: 10px     20px       30px           40px; 上 右 下 左
+                  上内边距   右内边距    下内边距     左内边距
+
+        * padding: 10px 40px 20px; /*上10  右40 下20 左 40*/  
+        
+        * padding: 20px 40px; /*上20 右40 下20 左40*/
+
+        30px  其他的都是40px
+
+        padding: 40px;
+        padding-top: 30px;         
+
+
+   注意  浏览器对某些元素比如ul等加上默认padding、margin样式往往影响制作页面
+    所以往往会把浏览器的默认样式去掉    
+
+4 border边框
+     三要素  粗细  线型  颜色
+     border: 10px solid #f00;  
+
+     关于线型
+        none	定义无边框。
+        hidden	与 "none" 相同。不过应用于表时除外，对于表，hidden 用于解决边框冲突。
+        dotted	定义点状边框。在大多数浏览器中呈现为实线。
+        dashed	定义虚线。在大多数浏览器中呈现为实线。
+        solid	定义实线。
+        double	定义双线。双线的宽度等于 border-width 的值。
+        groove	定义 3D 凹槽边框。其效果取决于 border-color 的值。
+        inset	定义 3D inset 边框。其效果取决于 border-color 的值。
+        outset	定义 3D outset 边框。其效果取决于 border-color 的值。
+        inherit	规定应该从父元素继承边框样式。
+
+   我们工作只用solid和dashed,其他的都有兼容问题
+   
+   border: 10px solid #f00; 
+
+   等价于  border-width: 10px; ------> 上右下左边框粗细都是10px
+           border-style: solid;
+           border-color: #f00;
+
+     border-width  border-top-width border-right-width border-bootom-width border-left-width   
+     
+   border按组成要素分三个属性 border-width、border-style、border-color 每个要素按照方向又分四个方向 上 右 下 左  
+   
+
+   练习 1 要设置四个边框都是10px 线状都是实线  上红  左右黄色  下绿色    
+        2 黑 10px
+          红 6px 
+          蓝 10px  
+          紫 6px     全部为实线
+
+5 margin外边距
+     指的是自己的盒子边框外侧到其他盒子边框外侧的距离
+     四个方向 分别 margin-top  margin-right margin-bottom margin-left
+
+  margin的塌陷(上下)现象  margin小的会陷入到margin大的值 以大的为准    
+
 
 2017-10-23
 ==========================================================================================================
+css居中技术
+1  text-align: center
+   让盒子的文字水平居中，该属性是设置到盒子上的
+
+   <div>文字文字</div>
+
+   这个方法只能居中文本流的东西（文字、图片、表单元素）
+
+2 margin:0 auto  让盒子水平居中 
+
+
+3 单行文本垂直居中 line-heght=height 
+   注意 对多行文本不起作用   
+
+
+标准文档流
+   网页从左到右从上到下去编写或显示，内置了许多性质
+ * 空白折叠
+ * 高矮不齐 底边对齐 
+ * 标准文档流的元素分为"块级元素"和"行内级元素"
+   html标签（元素）  分为两类
+      容器级元素：div  h1~h6  ul li dl dt dd等（里面啥都可以放置）
+      文本级元素  a  input p等（文字 图片 超链接 表单）
+   标准流 分为
+       块级元素  容器级元素全是块级元素以及文本级的P元素
+                 div h1~h6 p li  .....
+
+                 特点：1 能够设置宽高
+                       2 不能并排（独占一行）
+                       3 不设置宽度 默认为父亲的宽度 
+       行内级元素  除了p元素之外的所有的文本级元素 
+                    a   span  b u  i em strong
+                  特点：1 不能设置宽高，宽高可以由内容撑开
+                        2 能并排
+        行内级元素与块元素之间的转换 display
+                    display: inline; 把其他元素转成行内级元素
+                    display: block; 把其他元素转成块元素                    
+  总结：标准流做不出网页的，原因是网页很多元素是并排并且可以设置宽高 
+    所以就要学其他技术让元素脱离标准流
+
+让标准流的元素脱离标准流
+    三种方式可以让元素脱离标准流（脱标）: 浮动 绝对定位 固定定位
+
+    * 浮动------做并排用 
+
+         float: left
+         float: right
+
+      基本印象: 浮动的元素去贴靠父亲的边,贴靠的过程中，假如被哥哥们挡住了
+      就会贴在哥哥的边上
+
+    * 浮动性质
+        a  脱标 
+             证明1  span加上浮动之后 设置宽高起效,假如浮动的元素不设置宽高
+             则靠内容撑开
+             证明2  css代码
+	   /*第一盒子浮动 脱标*/
+	    .demo1 {
+	    	width: 200px;
+	    	height: 200px;
+	    	background-color: red;
+	    	float: left;
+	    }
+        
+        /*该盒子没有浮动*/
+	    .demo2 {
+	    	width: 100px;
+	    	height: 100px;
+	    	background-color: yellow;
+	    }
+        html代码
+	    <div class="demo1">
+		
+	    </div>
+	   <div class="demo2">
+		
+	    </div>
+
+	    第二个div显示在标准流左上角
+
+              
 
 2017-10-25
 ==========================================================================================================
