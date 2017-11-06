@@ -1,0 +1,37 @@
+
+/*头部*/
+.nav{right:150px;top: 40px;height: 27px;}
+.nav ul li{float: left;margin:0 15px;height: 30px;line-height: 30px;}
+.nav ul li a{font-weight: bold;padding:10px 20px;}
+.nav ul li a:hover{background-color: #a48dd1;padding:10px 20px;color:#fff;text-decoration: none;}
+/*内容部分*/
+.btnpn{display: block;top: 250px;line-height: 50px;text-align: center;color:rgba(0,0,0,0.2);}
+.scrollnav ul li{height: 568px;width: 100%;background: url(../img/scrollpic1.jpg) center top no-repeat;}
+.scrollimg a{display: block;height: 568px;}
+.pre{left: 0;}
+.next{right: 0;}
+.btnpn:hover{color:#fff;text-decoration: none;}
+
+.concent{margin: 45px auto 0;width: 980px;height: 230px;}
+.conentleft{margin: 0 35px 0 0;}
+.conentleft ul li{height: 27px;line-height: 27px;overflow: hidden;font-size: 12px;}
+.conentleft ul li span{float: right;color:#777;}
+.conentleft ul li a{float: left;width: 220px;height: 27px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;color:#777;}
+.hotnav{border-left: 5px solid #a48dd1;padding-left: 10px;height: 35px;}
+.hotnav,.more{line-height: 27px;}
+
+.conentcenter{width: 260px;margin: 0 35px 0 0;}
+.inputcon{width: 174px;padding: 0 5px;border: 1px solid #cacaca;line-height: 25px;}
+.btn{display:block;height: 27px;border:0;line-height:25px;text-align:center;background: #f8db3a;color: #ab790d;cursor: pointer;margin-left: 6px;}
+.jobsearch{height: 25px;padding-bottom: 30px;}
+.jobsort a{float: left;margin: 0 8px 10px 0;white-space: nowrap;font-size: 12px;color:#777;}
+.conentright{margin: 0 30px 0 0;}
+.conentright ul li{float: left;width: 250px;height: 27px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.conentright ul li a{font-size: 12px;color:#777;}
+.wechat{width: 230px;height: 66px;cursor: pointer;}
+/*底部*/
+.fcon{padding: 15px 0 30px;border-top: 1px solid #dfdfdf;}
+.footern{margin: 0 auto;width: 960px;line-height: 22px;}
+.oneline a,.oneline1 a,.oneline2 a{float: left;display:block;width: 72px;height:25px;line-height:25px;padding:0 8px 0 0;color:#777;font-size: 12px;text-align: left;}
+.oneline1 a,.oneline2 a{width: auto;}
+.oneline3 a img{cursor: pointer;}
