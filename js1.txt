@@ -1,0 +1,171 @@
+2017-11-10
+==========================================================================================================
+html(5)+css(3)+js
+=======================
+js ------- javascript
+
+html ¸ºÔðÒ³ÃæµÄ½á¹¹£¨´ÓÓïÒåµÄ½Ç¶È£©
+css  ¸ºÔðÒ³ÃæµÄ±íÏÖ(ÃÀ»¯Ò³Ãæ)
+js   ¸ºÔðÒ³ÃæµÄ½»»¥»òÐÐÎª
+
+=======================
+js 
+1 ×÷ÓÃ
+   Êý¾ÝÑéÖ¤
+   ²Ù×÷ÔªËØ
+   ÍøÒ³ÌØÐ§
+   webÓÎÏ·
+   nodejsÊµÏÖ·þÎñÆ÷±à³Ì 
+   ...
+   ÒÆ¶¯¶ËÒ³Ãæ
+   pc¶ËÒ³Ãæ
+
+2 ¼ò½é
+    Íø¾°¹«Ë¾ livescript  java  -------> javascript 
+
+    96 js1.0
+    97 js1.1 ------> ECMA(Å·ÖÞ¼ÆËã»úÖÆÔìÉÌÐ­»á)
+    98 js2.0
+    99 ecmascript3.0
+    07 ecmascript4.0
+    11.6 ecmascript5.1
+    2015Äê6ÔÂ ECMAScript6 (es6)  ECMAScript2015
+               es7
+
+3 js×é³É²¿·Ö
+     jsÈý´ó²¿·Ö »ù´¡Óï·¨+DOM+BOM(ÁË½â)
+
+
+=====================jsÓï·¨=============
+
+   ¿ÝÔï£¨µ«ÊÇÖØÒª£©ÑµÁ·Âß¼­Ë¼Î¬µÄ½×¶Î
+1 ´Óhello worldËµÆð ¼û1.html
+    <script type="text/javascript">
+	    alert("Hello world");
+	</script>
+   * jsÓïÑÔÐèÒªÅäºÏhtmlÒ³ÃæÒ»ÆðÊ¹ÓÃ
+   * jsÊéÐ´Î»ÖÃ
+         ÄÚÇ¶Ê½---°Ñjs´úÂëÐ´µ½Ò»¶Ôscript±êÇ©ÄÚ²¿ £¬Õâ¶Ô±êÇ©ÀíÂÛÉÏ¿ÉÒÔ·ÅÔÚÒ³ÃæµÄÈÎºÎÎ»ÖÃ£¬µ«ÊÇ´ÓÐ§ÂÊÀ´Ëµ½¨Òé´ó¼Ò
+         ·ÅÔÚbody½áÊø±êÇ©Ö®Ç°
+         ÐÐÄÚÊ½---²»ÍÆ¼ö
+         ÍâÁ´Ê½--- °Ñjs´úÂëÐ´ÔÚÒ»¸öµ¥¶ÀjsÎÄ¼þÖÐ£¬ÔÚhtmlÖÐÒýÈëjs¼´¿É
+2  ½éÉÜÒ»Ð©³£ÓÃjsÓï¾ä
+     alert() jsÄÚÖÃÒ»¸ö¹¦ÄÜ£¬µ¯³ö´°¿Ú  
+              Óï·¨ alert("ÐÅÏ¢"); 
+              ×¢Òâ: ·ûºÅ¶¼ÊÇÓ¢ÎÄ×´Ì¬£¬³ý·Çºº×Ö
+
+     prompt() ¶Ô»°¿ò ¼û2.html
+     
+     console.log() ±ÈÈç console.log("ÎÒ»áÏÔÊ¾ÔÚ¿ØÖÆÌ¨");
+                   1 ÕÒ´í»òÕßÑ§Ï°Ò»¸öÐÂ¶«Î÷
+                   2 ²»»á×èÈû³ÌÐòµÄÔËÐÐ
+
+3  ×¢ÊÍ------Ìá¸ß³ÌÐòµÄÔÄ¶ÁÐÔ
+     html  <!--×¢ÊÍ-->
+     css   /*  */
+     js µ¥ÐÐ×¢ÊÍ  //      sublime¿ì½Ý·½Ê½ ctrl+/
+        ¶àÐÐ×¢ÊÍ /* 
+                           sublime¿ì½Ý·½Ê½ ctrl+shift+/
+                 */
+
+4 ×ÖÃæÁ¿(³£Á¿)
+   ¹Ì¶¨ÖµµÄ±íÊ¾·½·¨ 
+  *  Êý×Ö×ÖÃæÁ¿                   
+        123 -12  1.6 ... 789
+    Infinity  NaN(±¾Éí¾ÍÊÇÒ»¸öÊý×Ö) 
+
+  * ×Ö·û´®×ÖÃæÁ¿
+      Ò»¶ÔË«ÒýºÅ»òµ¥ÒýºÅÒýÆðÀ´µÄ  "hello world"  "789" 
+
+      ""123"   
+       \n »»ÐÐ
+       \t ÖÆ±í·û
+       \"
+       \'
+       \\ Ò»¸ö·´Ð±¸Ü
+
+       Ð¡Á·Ï° Êä³öÒÔÏÂ×Ö·û´® ÎÒËµ:"Ã÷ÌìË«Ê®Ò»£¬¶çÊÖ½Ú¿ìÀÖ"
+                             c:\my\music\µ¥ÉíÇé¸è.mp3 
+
+5 ±äÁ¿------Ïàµ±ÓÚÒ»¸öÈÝÆ÷
+
+    * ±äÁ¿¶¨ÒåºÍ¸³Öµ
+        // ¶¨Òå±äÁ¿
+	     var a;   
+	     // ¸ø±äÁ¿¸³Öµ
+	     a = 100;
+	     // Ê¹ÓÃ±äÁ¿
+	     alert(a);
+	   »ò var b = 200;  
+    * ±äÁ¿ÃûµÄÃüÃû¹æÔò
+          ×ÖÄ¸¡¢Êý×Ö¡¢ÏÂ»®Ïß»ò$ 
+          ¿ªÍ·²»ÄÜÎªÊý×Ö
+          ²»ÄÜÓëjsµÄ¹Ø¼ü×Ö£¨ÔÚjsÖÐÓÐÌØÊâº¬ÒåµÄ´ÊÓï£©³åÍ»  ±ÈÈçvar var;  
+          ²»ÒªÊ¹ÓÃ±£Áô×Ö ±ÈÈç int  short 
+          Çø·Ö´óÐ¡Ð´  var a Óëvar A ²»Í¬µÄ±äÁ¿
+       Á·Ï° 
+          var a;  // ÕýÈ·
+          var _; // ÕýÈ·
+          var $;// ÕýÈ·
+          var var;// ´íÎó ¹Ø¼ü×Ö³åÍ»
+          var 2; // ´íÎó 
+          var ~abc; //´íÎó
+          var a-b; // Á¬×Ö·û²»ÔÊÐí³öÏÖ
+     * ±äÁ¿¸³Öµ
+         var a;
+         console.log(a); // undefined ´Ë´¦±äÁ¿¶¨ÒåÁËµ«Î´¸³Öµ£¬´ËÊ±js»á¸øËûÒ»¸öÄ¬ÈÏÖµundefined
+         console.log(b); // ±¨´í b is not defined(ÿ)
+
+     * ±äÁ¿ÀàÐÍÌáÉý          
+
+2017-11-13
+==========================================================================================================
+	js
+* ±äÁ¿µÄÊý¾ÝÀàÐÍ
+	js
+	jsÖ±½ÓÁ¿»ò±äÁ¿¶¼ÊÇÓÐÀàÐÍµÄ
+	jsÊý¾ÝÀàÐÍ·ÖÎª¼òµ¥µÄÊý¾ÝÀàÐÍºÍ¸´ÔÓµÄÊý¾ÝÀàÐÍ
+
+	¼òµ¥µÄÊý¾ÝÀàÐÍ·ÖÎª5ÖÖ£¨typeof varvalue£©
+
+		Number
+			ÕûÊý  ¸¡µãÊý£¨Ð¡Êý£©  ÌØÊâÖµ£¨NaN£©
+		String
+			ÒÔË«ÒýºÅ»òµ¥ÒýºÅÒýÆðµÄÒ»ÏµÁÐ×Ö·û
+		undefined
+			Ò»¸ö±äÁ¿¶¨Òåµ«Î´¸³Öµ£¬´ËÊ±±äÁ¿Öµ¾ÍÊÇundefined£¬
+			ËüµÄÀàÐÍ¾ÍÊÇundefined
+		Boolean  ²¼¶ûÀàÐÍ  Ö»ÓÐÁ½¸öÖµtrue/false
+		null  nullÀàÐÍ | ºóÃæÏ¸Ëµ
+	¸´ÔÓµÄÊý¾ÝÀàÐÍ
+		Object
+	
+* Êý¾ÝÀàÐÍµÄ×ª»»
+	1.Êý×Ö¿ÉÒÔ×ª×Ö·û´® £¨+Æ´½ÓÔËËã£©
+		20 + ¡°¡± ¡ª¡ª¡ª> ¡°20¡±
+		¡°¡± + 5¡ª¡ª¡ª>¡±5¡±
+
+	2.×Ö·û´®×ªÊý×Ö  parseInt(b)
+		¡°123¡± ¡ª¡ª¡ª>  123
+		ÎÒÃÇ¿ÉÒÔÊ¹ÓÃparseInt(¡°123¡±)½øÐÐ×ª»»
+		parseInt()¿ÉÒÔ°Ñ×Ö·û´®×ªÎªÕûÊý
+			Ò²¿ÉÒÔ¶ÔÊý×ÖÀàÐÍµÄ½øÐÐÈ¡Õû²Ù×÷
+
+
+* ÔËËã·û
+	+
+	-
+	*
+	/
+	% È¡Ä£ÔËËã·û£¨ÇóÓàÔËËã£©¹ØÐÄÁ½ÊýµÄÓàÊý Óë±»³ýÊý·ûºÅ±£³ÖÒ»ÖÂ
+		ÅÐ¶ÏÆæÅ¼ÐÔ
+			a%2 == 0 Å¼Êý
+			123%10 == 3 µÃµ½¸öÎ»ÉÏµÄÊý 
+	ÓëÊýÑ§ÔËËãÏà¹ØµÄ¶ÔÏó  
+	Math¶ÔÏóÌá¹©ÁËºÜ¶àÊôÐÔ»ò·½·¨
+
+
+* ½ð¶î
+
+      
+
