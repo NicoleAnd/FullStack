@@ -1,15 +1,15 @@
-body{background: #f4f4f4;color: #3c3c3c;font-weight: 200;font-size: 12px;}
+body{min-width:1190px;background: #f4f4f4;color: #3c3c3c;font-weight: 200;font-size: 12px;}
 .w13{width:13px;} 
 .orange-font{color:#ff4400;}
 /*顶部导航 高度分别36 121*/
 .header{height:140px;}
 .top-nav{height: 36px;background-color: #f5f5f5;border-bottom: 1px solid #eee;}
-.top-nav-center{width:100%;height:36px;margin:0 auto;}
+.top-nav-center{width:1190px;height:36px;margin:0 auto;}
 .top-nav ul li{list-style: none;float: left;border:0;line-height: 35px;text-align: center;padding:0 5px;}
 li i{position:relative;display: inline-block;width: 11px;height: 11px;margin-right: 5px;vertical-align: middle;}
-i.favoriteicon{background:url(img/top-favorite.png) left center no-repeat;background-size: 11px;}
-i.netnavicon{background:url(img/top-nav.png) left center no-repeat;background-size: 11px;}
-i.shoppingcarticon{background: url(img/top-shoppingcart.png) left center no-repeat;background-size: 11px;}
+i.favoriteicon{background:url(../img/top-favorite.png) left center no-repeat;background-size: 11px;}
+i.netnavicon{background:url(../img/top-nav.png) left center no-repeat;background-size: 11px;}
+i.shoppingcarticon{background: url(../img/top-shoppingcart.png) left center no-repeat;background-size: 11px;}
 .top-nav ul li a:hover{color:#ff4400;text-decoration: none;}
 .top-nav ul li a.favorite:hover i.favoriteicon{background: url(img/top-favorite-hover.png) left center no-repeat;background-size: 13px;width: 13px;height: 13px;}
 .top-nav ul li img{width: 9px;margin:0 5px;vertical-align: middle;}
