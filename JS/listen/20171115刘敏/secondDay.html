@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>第二天js作业</title>
+	<style type="text/css">
+		body{margin:0;padding:0;font-family: "Arial","Microsoft Yahei","SimSun"; font-size: 14px;line-height: 30px;color:#333;background: #f5f5f5}
+		.wrapper div{;margin:10px 20px;}
+		div.wrapper{background: #fff;padding: 10px 0;}
+		button{border:1px solid skyblue;background: skyblue;color:#fff;cursor: pointer;}
+		button:hover{color:black;}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div>
+			<span>第一题：判断这个数字能否被5、6整除,请用户点击输入任意一个数字</span>
+			<button onclick="first()">点击输入计算</button>
+		</div>
+		<div>
+			<span>第二题：判断两个输入数字的奇偶性是否相同</span>
+			<button onclick="second()">点击输入计算</button>
+		</div>
+		<div>
+			<span>第三题：判断输入年是否是闰年</span>
+			<button onclick="third()">点击输入计算</button>
+		</div>
+		<div>
+			<span>第四题：根据要求计算年终奖的分发</span>
+			<button onclick="forth()">点击输入计算</button>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function first(){
+			var figure=prompt("判断这个数字能否被5、6整除，请输入任意一个数：","");
+			if (figure%5 == 0) {
+				if (figure%6 == 0) {
+					figure += "这个数既能被5整除，又能被6整除";
+				}else{
+					figure += "这个数能被5整除，但不能被6整除";
+				}
+			}else if(figure%6 == 0){
+				figure += "这个数能被6整除，但不能被5整除";
+			}else{
+				figure += "这个数既不能被5整除，又不能被6整除";
+			}
+			alert(figure);
+		}
+		function second(){
+			var figure1 = prompt("奇偶数的判断：请输入一个数字","");
+			var figure2 = prompt("再输入一个数字","");
+			var sResult = "";
+			if (figure1%2 == figure2%2) {
+				sResult += "你好，这两个数字的奇偶性相同";
+			}else{	
+				sResult += "你好，这两个数字的奇偶性不相同";
+			}
+			alert(sResult);
+		}
+		function third(){
+			var year = prompt("判断是否是闰年，请输入一个年份：","");
+			var tResult = "";
+			if ((year%4 == 0) && (year%100 !=0) || (year%400 == 0)) {
+				tResult += (year+"年，是闰年！");
+			}else{
+				tResult += (year+"年，不是闰年！");
+			}
+			alert(tResult);
+		}
+		function forth(){
+			var year = prompt("计算年终奖，请输入工作几年：","");
+			var salary = prompt("请输入月薪：","");
+			var award = 0;
+			var forthResult = "";
+			if (year >= 2) {
+				if (salary > 12000) {
+					award = 3.2*salary;
+					forthResult += "年终奖为：￥"+award;	
+				}else{
+					award = salary * 3;
+					forthResult += "年终奖为：￥"+award;	
+				}
+			}else if (year<2&&year>=1) {
+				if (salary > 10000) {
+					award = 1.7*salary;
+					forthResult += "年终奖为：￥"+award;	
+				}else{
+					award = salary * 1.5;
+					forthResult += "年终奖为：￥"+award;	
+				}
+			}else{
+				if (salary > 8000) {
+					award = 1.2*salary;
+					forthResult += "年终奖为：￥"+award;	
+				}else{
+					award = salary * 1;
+					forthResult += "年终奖为：￥"+award;	
+				}
+			}
+			alert(forthResult);
+		}
+	</script>
+
+</body>
+</html>
