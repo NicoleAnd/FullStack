@@ -57,45 +57,121 @@
 
 	<script type="text/javascript">
 		function thirdFun(){
-			var thirdInput = parseInt(prompt("请输入一个数字n："));
-			var thirdResult = 0;
-			for (var i = 1; i <= thirdInput; i++) {
-				thirdResult += i;
+			// var thirdInput = parseInt(prompt("请输入一个数字n："));
+			// var thirdResult = 0;
+			// for (var i = 1; i <= thirdInput; i++) {
+			// 	thirdResult += i;
+			// }
+			// alert("计算1+2+3+4+……"+thirdInput+"的和："+ thirdResult);
+
+			// // 用for循环实现
+			// var sum = 0;
+			// for(var i = 0;i <= 100;i++){
+			// 	sum = sum+i;
+			// }
+			// //用while实现
+			// var sum = 0;//定义sum存储和
+			// var i = 1;//循环变量
+			// while(i<=100){
+			// 	sum = sum + i;
+			// 	i++;
+			// }
+			// 用dowhile实现
+			// var sum = 0;
+			// var i = 1;
+			// do{
+			// 	sum = sum+i;
+			// 	i++;
+			// }while(i<=100);
+			
+			// 完整答案
+			var n = parseInt(prompt("请你输入一个整数"));
+			while(n<1){
+				n = parseInt(prompt("请你输入一个正整数"));
+				if (n>=1) {
+					break;
+				}
 			}
-			alert("计算1+2+3+4+……"+thirdInput+"的和："+ thirdResult);
+
+			var sum = 0;
+			for (var i = 1; i <= n; i++) {
+				sum = sum + i;
+			}
+			console.log(sum);
+
 		}
 		function forthFun(){
-			var forthInput = parseInt(prompt("请输入一个整数："));
-			var forthResult = 1;
-			for (var i = forthInput; i > 0; i--) {
-				forthResult *= i;
+			// var forthInput = parseInt(prompt("请输入一个整数："));
+			// var forthResult = 1;
+			// for (var i = forthInput; i > 0; i--) {
+			// 	forthResult *= i;
+			// }
+			// alert("计算"+forthInput+"的阶乘："+ forthResult);
+			
+			// 完整答案
+			var n = parseInt(prompt("请你输入一个整数"));
+			while(n<1){
+				n = parseInt(prompt("请你输入一个正整数"));
+				if (n>=1) {
+					break;
+				}
 			}
-			alert("计算"+forthInput+"的阶乘："+ forthResult);
+
+			var sum = 0;
+			for (var i = 1; i < n; i++) {
+				sum = sum * i;
+			}
+			console.log(sum);
 		}
 		function fifthFun(){
-			var fifthInput = parseInt(prompt("请输入一个数："));
-			var fifthResult = 0;
-			for(var i = 2; i <= fifthInput; i++){
-				for (var j = 3; j <= fifthInput + 1; j++) {
-					fifthResult += j/i;
+			// var fifthInput = parseInt(prompt("请输入一个数："));
+			// var fifthResult = 0;
+			// for(var i = 2; i <= fifthInput; i++){
+			// 	for (var j = 3; j <= fifthInput + 1; j++) {
+			// 		fifthResult += j/i;
+			// 	}
+			// }
+			// alert("计算 n="+fifthInput+"的结果为："+ fifthResult);
+			var n = parseInt(prompt("请输入一个整数"));
+			while(n<2){
+				n = parseInt(prompt("请输入一个正整数"));
+				if (n>=2) {
+					break;
 				}
 			}
-			alert("计算 n="+fifthInput+"的结果为："+ fifthResult);
+			var sum = 0;
+			for (var i = 1; i <= n; i++) {
+				sum = sum + (i+1)/i;
+			}
+			alert(sum);
 		}
 		function sixthFun(){
-			var sixthInput = parseInt(prompt("请输入一个正整数："));
-			for(var i = 2; i < sixthInput; i++){
-				if (!(sixthInput % i)) {
-					console.log(i);
+			// var sixthInput = parseInt(prompt("请输入一个正整数："));
+			// for(var i = 2; i < sixthInput; i++){
+			// 	if (!(sixthInput % i)) {
+			// 		console.log(i);
+			// 	}
+			// }	
+			var n = parseInt(prompt("请输入一个整数"));
+			for (var i = 1; i <= n; i++) {
+				if (n % i ==0) {
+					console.log(n+"n的约束有"+i);
 				}
-			}	
+			}
+			
 		}
 		function seventhFun(){
+			// for(var i = 1; i <= 60; i++){
+			// 	if (!(i % 7 == 0)) {
+			// 		console.log(i);
+			// 	}
+			// }	
 			for(var i = 1; i <= 60; i++){
-				if (!(i % 7 == 0)) {
-					console.log(i);
+				if (i % 7 !== 0 && i%10 !== 7) {
+					console.log("安全数有：" + i);
 				}
 			}	
+			// contune事件完成 不安全数
 		}
 		function eighthFun(){
 			var l, m, n, k;
@@ -112,17 +188,29 @@
 			}
 		}
 		function ninthFun(){
-			var ninthSum = 0;
-			for(var i = 1; i <= 10000; i++){
+			// var ninthSum = 0;
+			// for(var i = 1; i <= 10000; i++){
+			// 	for(var j = 1; j < i; j++){
+			// 		if(!(i % j)){
+			// 			ninthSum += j;
+			// 		}
+			// 	}
+			// 	if(ninthSum == i){
+			// 		console.log(i);
+			// 	}
+			// 	ninthSum = 0;
+			// }
+
+			for(var i = 2; i <= 10000; i++){
+				var sum = 0;
 				for(var j = 1; j < i; j++){
-					if(!(i % j)){
-						ninthSum += j;
+					if (i % j == 0) {
+						sum = sum + j;
 					}
 				}
-				if(ninthSum == i){
+				if(sum == i){
 					console.log(i);
 				}
-				ninthSum = 0;
 			}
 		}
 		function tenthFun(){
