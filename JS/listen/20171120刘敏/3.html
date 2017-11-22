@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>金字塔</title>
+</head>
+<body>
+	<script>
+		var floor = parseInt(prompt("请输入金字塔的层数"));
+		var result;
+		for(var i = 1; i <= floor; i++){
+			result = "";
+			for(var j = 1; j <= floor-i; j++){
+				result += " ";
+			}
+			for(var k = 1; k <= i*2-1; k++){
+				result += "*";
+			}
+			console.log(result);
+		}
+
+	</script>
+</body>
+</html>
