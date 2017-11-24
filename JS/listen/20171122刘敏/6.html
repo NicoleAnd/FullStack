@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>验证哥德巴赫猜想。一个偶数可以拆分成两个质数之和</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function zhishu(a){
+			// 判断质数
+			var b = 0;
+			for(var m=2; m<a; m++){
+				if (a%m==0) {
+					b++;
+				}
+			}
+			if (b==0) {
+				return 1;
+			}else{
+				return 0;
+			}
+		}
+		function result(){
+			for(var i=2; i<=200; i=i+2){
+				for(var j=2; j<=i; j++){
+					for(var k=j; k<=i; k++){
+						if ((j+k==i)&&zhishu(j)&&zhishu(k)) {
+							console.log(i+"="+j+"+"+k+";"+"两个质数分别是："+j+"、"+k);
+						}
+					}
+				}
+			}
+		}
+		result();
+	</script>
+</body>
+</html>

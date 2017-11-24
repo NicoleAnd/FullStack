@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>判断一个数是不是完美数</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num = parseInt(prompt("请输入一个数："));
+		if (isWm(num)) {
+			alert(num+"是完美数");
+		}else{
+			alert(num+"不是完美数");
+		}
+		// 定义一个函数，判断是否是完美数，是true，否false
+		function isWm(a){
+			// 除了a本身之外的所有约数之和等于a
+			if (yueshuhe(a) == a) {
+				return true;
+			}else{
+				return false;
+			}
+		}
+		// 定义一个函数，求一个数的约束和（除本身）
+		function yueshuhe(b){
+			var sum = 0;
+			for(var i=1; i<=b/2; i++){
+				if (b%i==0) {
+					sum = sum + i;
+				}
+			}
+			// alert(sum);
+			return sum;
+		}
+	</script>
+</body>
+</html>

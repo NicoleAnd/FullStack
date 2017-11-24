@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>求2000 以内的全部亲密数</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function result(){
+			for(var k = 1;k<2000;k++){
+				qimi(k);
+			}
+		}
+		function qimi(m){
+			var suma = 0;
+			var sumb = 0;
+			
+			var b;
+			//整数A 的全部约数（包括1，不包括A 本身）
+			for(var i=1; i<=m/2; i++){
+				if (m%i == 0) {
+					suma += i;
+				}
+			}
+			b = suma;
+			for(var j=1; j<=b/2; j++){
+				if (b%j == 0) {
+					sumb += j;
+				}
+			}
+			if (suma == sumb) {
+				console.log(m+"、"+suma+"是一对亲密数");
+			}
+		}
+		result();
+	</script>
+</body>
+</html>
