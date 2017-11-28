@@ -14,3 +14,4 @@ i.shoppingcarticon{background: url(../img/top-shoppingcart.png) left center no-r
 .top-nav ul li a.favorite:hover i.favoriteicon{background: url(img/top-favorite-hover.png) left center no-repeat;background-size: 13px;width: 13px;height: 13px;}
 .top-nav ul li img{width: 9px;margin:0 5px;vertical-align: middle;}
 .top-vline{width: 17px;height:15px;margin:0 -10px;}
+

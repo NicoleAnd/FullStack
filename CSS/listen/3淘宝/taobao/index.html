@@ -12,26 +12,36 @@
 		/*顶部搜索栏 高度121*/
 		.top-mainVenue{height: 121px;background: #fff;}
 		.top-nav2{height: 97px;padding-top: 24px;}
-		
+		.top-search{width:990px;height: 90px;margin: 0 auto;}
+		.top-logo{width: 190px;height: 88px;}
+		.top-logo a{display: block;width: 190px;height: 88px;background: url(img/top-biglogo.png) center no-repeat;background-size: 145px;}
+		/*.top-search{width:627px;height:88px;margin-right:70px;margin-left:27px;}*/
+		.search-content{height: 62px;}
+		.search-classify{height: 22px;margin-left: 17px;}
+
 		.search-classify ul li{text-align: center;float: left;width: 36px;height: 22px;line-height: 22px;margin-right: 4px;cursor: pointer;}
 		.search-classify ul li a{width: 36px;height:22px;line-height: 22px;display:block;color: #F40;}
 		.search-classify ul li:hover a{text-decoration: none;background-color: #FFEEE5;color: #FF5400;}
-		.search-classify ul li.selected,.search-classify ul li.selected:hover a{
-			font-weight: 700;
-		    background-image: -webkit-linear-gradient(left,#ff9000 0,#ff5000 100%);
-		    background-image: -o-linear-gradient(left,#ff9000 0,#ff5000 100%);
-		    background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
-		    background-repeat: repeat-x;
-		    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9000', endColorstr='#ffff5000', GradientType=1);
-		    border-top-right-radius: 6px;
-		    border-top-left-radius: 6px;
-		}
+		.search-classify ul li.selected,.search-classify ul li.selected:hover a{font-weight: 700;border-top-right-radius: 6px;border-top-left-radius: 6px;background-image: -webkit-linear-gradient(left,#ff9000 0,#ff5000 100%);background-image: -o-linear-gradient(left,#ff9000 0,#ff5000 100%);background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);background-repeat: repeat-x;filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9000', endColorstr='#ffff5000', GradientType=1);}
 		.search-classify ul li.selected a{color: #FFF;}
-
-		
-
+		.inputsearch{height: 40px;}
+		.input-box{width:617px;height:35px;border-radius: 20px;border:2px solid #ff4400;}
+		.input-content{width: 472px;}
+		.input-content input{width: 472px;height:23px;line-height:24px;border-top-left-radius: 20px;border-bottom-left-radius:20px;border:none;outline: 0;background: #FFF;padding: 6px 0;text-indent: 10px;color:#000;font-size:12px;}
+		.input-content i{width:15px;height:15px;background:url(img/top-search.png) no-repeat;background-size:15px;position:absolute;top:10px;left:13px;}
+		.placeholderstyle{width:150px;height:15px;background:url(img/top-search.png) no-repeat;background-size:15px;top:10px;left:13px;line-height:15px;}
+		.placeholderstyle span{padding-left: 20px;color:#a3a3a3;}
+		.input-camera{width: 36px;height:35px;right: 70px;}
+		.input-camera a{display: block;background: url(img/top-camera1.png) no-repeat;background-size: 24px;width: 24px;height: 24px;margin:5px;}
+		.search-btn{right: -7px;top: -2px;z-index: 100;width: 74px;height: 39px;overflow: hidden;text-align: center;border-top-right-radius: 20px;border-bottom-right-radius: 20px;}
+		.search-btn button{font-size: 18px;font-weight: 700;color: #FFF;cursor: pointer;height: 100%;border: none;width: 100%;background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);background-repeat: repeat-x;}
+		.search-word{height: 26px;}
 		.search-word a{margin-right: 5px;}
-
+		.top-code{width:76px;height:88px;}
+		.codecon{display: block;border: 1px solid #eee;background-color: #FFF;text-align: center;position: relative;width: 74px;height: 86px;}
+		.codecon span{line-height:20px;color:#ff5000;}
+		.codecon img{width: 60px;height: 60px;margin:0 8px 8px 8px;}
+		.codeclose{position:absolute;top:0;left:-16px;display: block;background:url('img/top-close.png') center no-repeat;background-size:14px;width:15px;height: 15px;border: 1px solid #eee;}
 	</style>
 </head>
 <body>
@@ -60,37 +70,38 @@
 				</div>
 				<div class="top-mainVenue w">
 					<div class="top-nav2">
-						<div class="top-search" style="width: 990px;height:90px;margin: 0 auto;position: relative;">
-							<div class="top-logo" style="float:left;width: 190px;height:88px;background:orange">
-								<a href="#" style="display: block;width: 190px;height:88px;/*background:url(img/top-biglogo.png) center no-repeat;*/background-size:145px;"></a>
+						<div class="top-search pr">
+							<div class="top-logo">
+								<a href="#"></a>
 							</div>
-							<div class="top-search" style="float:left;width:627px;height:88px;/*background:red;*/margin-right:70px;margin-left:27px;">
-								<div class="search-content" style="background: green;height: 62px;">
-									<div class="search-classify" style="height: 22px;background: yellow;margin-left:17px;">
+							<div class="top-search fl">
+								<div class="search-content">
+									<div class="search-classify">
 										<ul>
 											<li class="selected"><a href="#">宝贝</a></li>
 											<li><a href="#">天猫</a></li>
 											<li><a href="#">店铺</a></li>
 										</ul>
 									</div>
-									<div class="inputsearch" style="height:40px;">
-										<!-- <input type="text" style="border-radius: 20px;height: 35px;width: 500px;"> -->
-										<div class="input-box" style="width:617px;height:35px;border-radius: 20px;border:2px solid #ff4400;position:relative;">
-											<div class="input-content" style="width: 472px;height: 100%;float: left;position:relative;">
-												<input type="text" style="width: 472px;height:23px;line-height:24px;border-top-left-radius: 20px;border-bottom-left-radius:20px;border:none;outline: 0;background: #FFF;padding: 6px 0;text-indent: 10px;color:#000;font-size:12px;">
-												<i style="width:15px;height:15px;background:url(img/top-search.png) no-repeat;background-size:15px;position:absolute;top:10px;left:13px;"></i>
-												<div style="width:150px;height:15px;background:url(img/top-search.png) no-repeat;background-size:15px;position:absolute;top:10px;left:13px;line-height:15px;">
-													<span style="padding-left: 20px;color:#a3a3a3">可爱棉服女中长款</span>
+									<div class="inputsearch">
+										<div class="input-box pr">
+											<div class="input-content fl pr h">
+												<input type="text">
+												<i></i>
+												<div class="placeholderstyle pa">
+													<span>可爱棉服女中长款</span>
 												</div>
 											</div>
-											<div class="input-camera" style="width: 36px;height:35px;position:absolute;right: 70px;">
-												<a href="#" style="display: block;background: url(img/top-camera1.png) no-repeat;background-size: 24px;width: 24px;height: 24px;margin:5px;"></a>
+											<div class="input-camera pa">
+												<a href="#"></a>
 											</div>
-											<div class="search-btn" style="position: absolute;right: -7px;top: -2px;z-index: 100;width: 74px;height: 39px;overflow: hidden;text-align: center;border-top-right-radius: 20px;border-bottom-right-radius: 20px;"><button style="font-size: 18px;font-weight: 700;color: #FFF;cursor: pointer;height: 100%;border: none;width: 100%;background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);background-repeat: repeat-x;">搜索</button></div>
+											<div class="search-btn pa">
+												<button>搜索</button>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="search-word" style="height: 26px;background:pink;">      
+								<div class="search-word">      
 									<a class="orange-font" href="#">发卡</a>
 									<a href="#">夹克外套</a>
 									<a class="orange-font" href="#">新款男鞋</a>
@@ -101,12 +112,17 @@
 									<a href="#">沙发</a>
 									<a href="#">定制窗帘</a>
 									<a href="#">衬衫</a>
-									<a href="#">男皮鞋</a>
 									<a href="#">时尚休闲鞋</a>
-									<a href="#">更多></a>
+									<a href="#" style="float: right;">更多></a>
 								</div>
 							</div>
-							<div class="top-code" style="float:left;width:76px;height:88px;background:yellow;"></div>
+							<div class="top-code fl pr">
+								<a class="codecon" href="#">
+									<span>手机淘宝</span>
+									<img src="img/top-code.png">
+								</a>
+								<a class="codeclose" href="#"></a>
+							</div>
 						</div>
 					</div>
 					
