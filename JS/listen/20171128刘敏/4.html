@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>第4题</title>
+</head>
+
+<body>
+    <!-- 
+		编写函数maxr(char) 返回字符串char中最长的连续重复字母
+		比如maxr("mmmiijjjjkkkkkkssptr") 返回"kkkkkk"
+ 	-->
+    <script type="text/javascript">
+    function maxr(char) {
+        if (char.length <= 1) return char;
+        var start = 0;
+        var length = 1;
+        var len = 1;
+        for (var end = 1; end < char.length; end++) {
+            if (char.charAt(end) === char.charAt(end - 1)) len++;
+            else {
+                if (len > length) {
+                    start = end - len;
+                    length = len;
+                }
+                len = 1;
+            }
+        }
+        if (len > length) return char.substr(char.length - len);
+        return char.substr(start, length);
+    }
+    var result = maxr("mmmiijjjjkkkkkkssptr");
+    console.log(result);
+    </script>
+</body>
+
+</html>

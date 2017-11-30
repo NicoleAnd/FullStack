@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>第6题</title>
+</head>
+<body>
+	<!-- 
+		有10个学生的成绩存在数组中，请统计最高分，最低分，并将最高分和最低分学生的下标输出到控制台
+	-->
+	<script type="text/javascript">
+		function score(){
+			var arr = [85,97,67,88,90,100,25,61,45,87];
+			var max = arr[0];
+			var min = arr[0];
+			var m  = 0;
+			var n = 0;
+			for(var i=0;i<arr.length;i++){
+				if (arr[i]>max) {
+					max = arr[i];	
+				}
+				if(arr[i]<min){
+					min = arr[i];	
+				}
+			}
+			for(var i=0;i<arr.length;i++){
+				if (arr[i] == max) {
+					m = i;
+				}
+				if (arr[i] == min) {
+					n = i
+				}
+			}
+			console.log("最高分："+max+"，角标为"+m+"。最低分："+min+"，角标为"+n+"。");
+			
+		}
+		score();
+	</script>
+</body>
+</html>

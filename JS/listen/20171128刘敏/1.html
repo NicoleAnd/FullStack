@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>第1题</title>
+</head>
+<body>
+	<!-- 
+		编写函数rev(char) 实现将字符串char倒置
+		比如rev("spring") 返回"gnirps"
+	-->
+	<script type="text/javascript">
+		function rev(char){
+			var str = char.split("").reverse().join(""); //拆分 反转 拼接
+			return str;
+		}
+		
+		var result = rev("spring");
+		console.log(result);
+	</script>
+</body>
+</html>

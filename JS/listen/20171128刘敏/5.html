@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>第5题</title>
+</head>
+<body>
+	<!-- 
+		有10个学生的成绩存在数组中，请统计大于等于平均成绩的人数。
+		成绩直接以数组形式写在程序中，不需要用户输入。
+ 	-->
+	<script type="text/javascript">
+		function score(){
+			var arr = [85,97,67,88,90,100,25,61,45,87];
+			var sum = 0;
+			var avg = 0;
+			var count = 0;
+			var scores = [];
+			for(var i=0;i<arr.length;i++){
+				sum += arr[i];
+			}
+			avg = sum / arr.length;
+			for(var j=0;j<arr.length;j++){
+				if (arr[j]>=avg) {
+					++count;	
+				}
+			}
+			console.log("10个学生成绩大于等于平均成绩"+avg+"的人数有"+count+"人");
+		}
+		score();
+	</script>
+</body>
+</html>

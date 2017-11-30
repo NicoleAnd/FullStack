@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>第3题</title>
+</head>
+<body>
+	<!-- 
+		编写函数rightchange(char,n) 实现字符串char循环右移n位。
+		比如rightchange("abcdefg",2) 返回"fgabcde"
+ 	-->
+	<script type="text/javascript">
+		function rightchange(char,n){
+			var len = char.length;
+			//位移大于字符串长度
+			n = n % len;
+			var right = char.substr(len-n,7);
+			return right + char.substr(0,len-n);
+		}
+		var result = rightchange("abcdefg",2);
+		console.log(result);
+	</script>
+</body>
+</html>
