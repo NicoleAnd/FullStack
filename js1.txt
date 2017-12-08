@@ -900,6 +900,88 @@ DOM概述
 2017-12-04
 ==========================================================================================================
    
+ECMASCRIPT  js  as(ActionScript)
+
+DOM(重点)
+
+
+BOM(了解) 
+
+=========================
+DOM
+1 文档对象模型，js把文档抽象出一个树，把树的组成部分称之节点（元素节点 属性节点 文本节点）
+
+2 DOM规范
+     98年之前的 0级规范
+     98 10 DOM1级规范
+      ... 2级规范
+      ... 3级规范
+
+3 DOM的东西
+   获得元素、css样式、事件、运动、元素尺寸，节点操作等 
+===================================
+1 获取dom元素（前提）
+
+    document.getElementById("id名字");  
+
+    // get------得到 
+    // Element------元素 单个
+    // ById 通过id
+    
+    注意  id一般区分大小写 ie6/7不区分
+        ie7  id获取元素时候 name属性也会当成id属性获取
+          <p name="p1"></p>
+          document.getElementById("p1");
+
+2 操作html
+   <img src="..." />
+   js提供两种选择 1 getAttribute()和setAttribute()
+
+                  2 点语法
+
+       总结 除了自定义属性用getAttribute()和setAttribute(),其他尽量使用点语法(尤其style) 
+       
+3  js操作css
+     * 对象打点调用style属性，是一个行内样式的样式对象，继续打点得到具体样式属性，并且可以进行更改
+     * 对于class定义的样式 用className属性 
+        .demo {
+            width: 200px;
+            height: 200px;
+        }
+
+        // 获取元素---->元素.className ="原来 demo"
+
+4  innerHTML与innerText和value
+     获取元素的内容 innerHTML支持标签
+                    innerText只获取文本 
+
+      value 获取变单元素内部的内容  
+
+
+5 js事件
+    事件是js给我们封装好的具体的行为，常见的事件如鼠标单击，鼠标悬停，鼠标的双击，键盘的单击....
+    事件三要素：事件名称  事件源 事件响应（事件处理）
+         打开计算机  
+             事件源 电源开关
+             事件 按下去
+             事件处理 计算机开机
+          猎人打猎物
+              事件源 枪
+              事件   打
+              事件响应 子弹飞出去 猎物被吓跑了
+
+
+     js事件类型 DOM0级事件
+           onclick 单击
+           ondblclick 双击
+           onmouseover 鼠标移上事件
+           onmouseout 鼠标移走事件  
+           onmousedown 鼠标点击按下事件
+           onmouseup 鼠标点击后弹起
+           onfocus 获取焦点事件
+           onblur 失去焦点
+           onload 页面加载事件  
+
 
 
 2017-12-06
