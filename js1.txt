@@ -1003,6 +1003,8 @@ DOM
                      * document.getElementsByTagName()
                        元素.getElementsByTagName()
 
+			var ul = document.getElementsByTagName("ul")[0];
+
                      应用: 批量操作 
                              表格隔行变色  
                            批量添加事件   
@@ -1016,6 +1018,32 @@ DOM
 
 2017-12-11
 ==========================================================================================================
+      DOM案例 1 轮播图  2 tab栏切换
+       
+计算后样式
+     1 概念 指的是html元素在多种css选择器综合作用下,得到最终样式
+     2 点语法  obj.style.width 只能得到行内式
+
+     3  不同浏览器实现的方式不一样
+           IE9+以及其他高级浏览器
+                window.getComputedStyle(元素) 该方法接受一个DOM元素，返回一个可以进行属性查询的接口，接口提供了一个方法getPropertyValue(具体的属性)
+              *  
+                window.getComputedStyle(box).getPropertyValue("border-width") 
+
+                getPropertyValue()方法得到样式属性值,样式属性的书写用横线方式，不能用驼峰式名称 
+               * []语法
+               console.log(window.getComputedStyle(box)["border-style"]); // solid
+               console.log(window.getComputedStyle(box)["borderStyle"]); // solid 支持驼峰式命名写法     
+
+           IE9以下
+             IE9以前的版本，有一个专门的api，附加在元素身上的currentStyle属性
+                 box.currentStyle.width
+
+
+     兼容的处理
+                       
+
+
 
 
 2017-12-13
