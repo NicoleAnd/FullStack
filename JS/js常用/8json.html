@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>json的创建修改删除遍历</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 创建一个json对象
+		var myJson = {
+			"name":"Nicole",
+			"age":26,
+			"height":170,
+			"sex":"Female",
+			"birth":"Shanaxi"
+		};
+		// 两种方式获取json属性
+		console.log(myJson.age);
+		console.log(myJson["height"]);
+		// 两种方式修改json属性 修改值
+		myJson.age = 27;
+		console.log(myJson.age);
+		myJson["height"] = 175;
+		console.log(myJson.height);
+		// 两种方式添加数据
+		myJson.job = "IT developer";
+		myJson["hobby"] = ["running","coding","sleeping"];
+		myJson.birthday = {
+			"year":1991,
+			"month":8,
+			"day":21
+		}
+		// 获取出生 月
+		var month = myJson.birthday.month;
+		console.log(month);
+		// 删除数据 delete 对象.属性
+		delete myJson.birth;
+		console.log(myJson);
+
+		// json的循环遍历
+		for(var k in myJson){
+			// alert(myJson[k]);
+			myJson[k] = myJson[k]+"增加值";
+		}
+		console.log(myJson);
+		// 复制json
+		var newJson = {};
+		for(var k in myJson){
+			newJson[k] = myJson[k];
+		}
+		console.log(newJson);
+	</script>
+</body>
+</html>
