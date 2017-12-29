@@ -41,21 +41,30 @@
 	    // img onlaoad事件  图片加载完毕后触发
 	    var num = 0;// 记住已经加载完的图片个数
 	    var left_num = 0;
+	    var timer = null; //timer记住定时器
 	    for(var i=0; i<imgs.length; i++) {
             imgs[i].onload = function() {
                 num++;
                 if(num==imgs.length) {
                 	// 条件成立 证明所有图片加载完毕
                 	//alert("全部加载完毕");
-                	setInterval(function() {
-                         left_num--;
-                         if(left_num<=-(ul.offsetWidth/2)) {
-                         	 left_num = 0;
-                         }
-                         ul.style.left = left_num+"px";
-                	}, 1);
+                	timer = setInterval(move, 1);
+                	// 绑定大盒子鼠标移入事件
+                	box.onmouseover = function(){
+                		clearInterval(timer);
+                	}
+                	box.onmouseout = function(){
+                		timer = setInterval(move,1);
+                	}
                 }
             }
+	    }
+	    function move(){
+	    	 left_num--;
+             if(left_num<=-(ul.offsetWidth/2)) {
+             	 left_num = 0;
+             }
+             ul.style.left = left_num+"px";
 	    }
 	</script>
 </body>
