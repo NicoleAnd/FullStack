@@ -1356,6 +1356,55 @@ offsetLeft和offsetTop
 
 2017-12-27
 ==========================================================================================================
+1 整体感知
+    $()   
+    a 改变css属性   $("li").css("background-color","red");
+
+    b Dom元素绑定事件  
+
+    c 可以给dom元素追加 删除 节点
+
+    d 可以做动画 animate() 
+
+2 jquery特点  批量处理
+
+
+3 jquery对象与原生dom元素之间的转换
+     原生obj ------>$(obj) 变成了jquery对象
+     this    ------>$(this)
+
+     $("div") ------> 原生  $("div")[索引]或$("div").get(索引)
+
+4 jquery选择器
+    基础选择器（效仿css选择器）
+    自己特有的选择器
+         first  last  odd  even  lt(index) gt(index) eq(index)
+
+5 jquery操作css
+    * 方法 css() 方法
+    * $(selector).css("属性名","属性值")
+      比如 $(".demo").css("width","200px");
+           $(".demo").css("height","200px");
+           $(".demo").css("color","purple");
+           $(".demo").css("text-align","center"); 
+           ...
+        // 多个属性同时设置 
+        $(selector).css({
+              "k":"v",
+              "k":"v",
+              "k":"v"
+        });      
+    
+      注意 1 css()对象里的复合属性可以用-隔开或者用驼峰式命名方式
+           2
+        
+
+
+
+            
+
+
+
 
 
 2017-12-29
