@@ -679,6 +679,7 @@ js
           unshift()  在数组开头追加一个或多个元素 
 
 
+
 2017-11-29
 ==========================================================================================================
 闭包
@@ -1032,6 +1033,7 @@ DOM
                console.log(window.getComputedStyle(box)["border-style"]); // solid
                console.log(window.getComputedStyle(box)["borderStyle"]); // solid 支持驼峰式命名写法     
 
+
            IE9以下
              IE9以前的版本，有一个专门的api，附加在元素身上的currentStyle属性
                  box.currentStyle.width
@@ -1164,6 +1166,7 @@ offsetLeft和offsetTop
 7 定时器的应用          
       简单无缝滚动
 
+
       升级版无缝滚动
              变化 1 li元素宽高不设置死，用内容撑开
                   2 用js动态复制html结构
@@ -1291,6 +1294,7 @@ offsetLeft和offsetTop
 2 回调函数
 
 
+
 3 call与apply
     我们希望在普通函数中自定义自己的this,此时可以用call()或apply()
 
@@ -1399,9 +1403,6 @@ offsetLeft和offsetTop
            2
         
 
-
-
-            
 
 
 
